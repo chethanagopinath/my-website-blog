@@ -29,7 +29,6 @@ export default function Home({allPostsData}) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>Hello, I'm Chethana 👋🏼 </p>
-        <br />
         <p>I'm a software engineer residing in sunny California. I enjoy learning, solving problems, and spending my free time experimenting with new cuisines and flavors in the kitchen and exploring beautiful scenic places. </p>
         <HStack spacing={4} pb={5} pt={5}>
           <a href={`mailto:${email}`}>
