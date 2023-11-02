@@ -4,8 +4,9 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
-import {Icon} from '@chakra-ui/react'
+import {Icon, Spacer} from '@chakra-ui/react'
 import { MdEmail } from 'react-icons/md';
+import { FaLinkedin } from 'react-icons/fa';
 import { IconButton } from '@chakra-ui/react'
 import { EmailIcon } from '@chakra-ui/icons';
 
@@ -27,11 +28,19 @@ export default function Home({allPostsData}) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Hello, I'm Chethana. I'm a software engineer residing in sunny California. I enjoy learning, solving problems, and spending my free time experimenting with new cuisines and flavors in the kitchen and exploring beautiful scenic places. </p>
+        <p>Hello, I'm Chethana 👋🏼 </p>
         <br />
-        <a href={`mailto:${email}`}>
-          <Icon as={MdEmail} color='green.500' w={8} h={8} />
-        </a>
+        <p>I'm a software engineer residing in sunny California. I enjoy learning, solving problems, and spending my free time experimenting with new cuisines and flavors in the kitchen and exploring beautiful scenic places. </p>
+        <br />
+        <section>
+          <a href={`mailto:${email}`}>
+            <Icon className={`${utilStyles.socialsSection}`} as={MdEmail} color='green.500' w={8} h={8} />
+          </a>
+          <a href={`https://www.linkedin.com/in/chethana-gopinath/`}>
+            <Icon className={`${utilStyles.socialsSection}`} as={FaLinkedin} color='blue.500' w={8} h={8} />
+          </a>
+        </section>
+        
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
