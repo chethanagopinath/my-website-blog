@@ -4,11 +4,11 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
-import {Icon, Spacer} from '@chakra-ui/react'
+import { Divider, Icon } from '@chakra-ui/react'
 import { MdEmail } from 'react-icons/md';
-import { FaLinkedin } from 'react-icons/fa';
-import { IconButton } from '@chakra-ui/react'
-import { EmailIcon } from '@chakra-ui/icons';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Stack, HStack } from '@chakra-ui/react'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -31,16 +31,20 @@ export default function Home({allPostsData}) {
         <p>Hello, I'm Chethana 👋🏼 </p>
         <br />
         <p>I'm a software engineer residing in sunny California. I enjoy learning, solving problems, and spending my free time experimenting with new cuisines and flavors in the kitchen and exploring beautiful scenic places. </p>
-        <br />
-        <section>
+        <HStack spacing={4} pb={5} pt={5}>
           <a href={`mailto:${email}`}>
-            <Icon className={`${utilStyles.socialsSection}`} as={MdEmail} color='green.500' w={8} h={8} />
+            <Icon as={MdEmail} color='green.500' w={8} h={8} />
           </a>
           <a href={`https://www.linkedin.com/in/chethana-gopinath/`}>
-            <Icon className={`${utilStyles.socialsSection}`} as={FaLinkedin} color='blue.500' w={8} h={8} />
+            <Icon as={FaLinkedin} color='blue.500' w={8} h={8} />
           </a>
-        </section>
-        
+          <a href={`https://github.com/chethanagopinath`}>
+            <Icon as={FaGithub} color='black.500' w={8} h={8} />
+          </a>
+        </HStack>
+        <Button colorScheme='purple' size='md' href="https://drive.google.com/file/d/18dGMncVIzm-BGyM9PZ2TJtlrkQHejnVX/view?usp=sharing">
+          Resume
+        </Button>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
