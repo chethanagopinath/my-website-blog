@@ -4,6 +4,10 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import {Icon} from '@chakra-ui/react'
+import { MdEmail } from 'react-icons/md';
+import { IconButton } from '@chakra-ui/react'
+import { EmailIcon } from '@chakra-ui/icons';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -15,6 +19,8 @@ export async function getStaticProps() {
 }
 
 export default function Home({allPostsData}) {
+  const email = 'chethanaagopinath@gmail.com'
+
   return (
     <Layout home>
       <Head>
@@ -22,10 +28,10 @@ export default function Home({allPostsData}) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>Hello, I'm Chethana. I'm a software engineer residing in sunny California. I enjoy learning, solving problems, and spending my free time experimenting with new cuisines and flavors in the kitchen and exploring beautiful scenic places. </p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
+        <br />
+        <a href={`mailto:${email}`}>
+          <Icon as={MdEmail} color='green.500' w={8} h={8} />
+        </a>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
