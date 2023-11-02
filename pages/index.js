@@ -41,9 +41,11 @@ export default function Home({allPostsData}) {
             <Icon as={FaGithub} color='black.500' w={8} h={8} />
           </a>
         </HStack>
-        <Button colorScheme='purple' size='md' href="https://drive.google.com/file/d/18dGMncVIzm-BGyM9PZ2TJtlrkQHejnVX/view?usp=sharing">
-          Resume
-        </Button>
+        <a href={`https://drive.google.com/file/d/18dGMncVIzm-BGyM9PZ2TJtlrkQHejnVX/view?usp=sharing`}>
+          <Button colorScheme='purple' size='md'>
+            Resume
+          </Button>
+        </a>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
