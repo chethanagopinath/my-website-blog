@@ -1,6 +1,6 @@
 ---
 title: 'Reducing manual mind tasks with code'
-date: '2023-11-12'
+date: '2023-11-17'
 ---
 
 The brain is terrible at performing methodical mind tasks. We all know that. Especially when they are things like comparing if a bunch of nums in one file are not present in another.
