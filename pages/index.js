@@ -41,10 +41,10 @@ export default function Home({allPostsData}) {
             <Icon as={FaGithub} color='black.500' w={8} h={8} />
           </a>
         </HStack>
-        <a href={`https://drive.google.com/file/d/18dGMncVIzm-BGyM9PZ2TJtlrkQHejnVX/view?usp=sharing`}>
-          <Button colorScheme='purple' size='md'>
+        <a href="https://drive.google.com/file/d/18dGMncVIzm-BGyM9PZ2TJtlrkQHejnVX/view?usp=sharing"
+          className="btn text-white bg-violet-600 hover:bg-violet-700 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"
+        >
             Resume
-          </Button>
         </a>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
