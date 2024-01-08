@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -24,4 +28,8 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+.btn {
+  @apply rounded-full py-2 px-3 text-xs font-mono tracking-wide cursor-pointer;
 }
