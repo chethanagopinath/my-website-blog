@@ -1,6 +1,6 @@
 ---
-title: 'Fixing UI in my website'
-date: '2023-12-11'
+title: 'Fixing UI in website'
+date: '2024-01-07'
 ---
 
 ### In progress 🚧
