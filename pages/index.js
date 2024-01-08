@@ -34,7 +34,7 @@ export default function Home({allPostsData}) {
           <a className='px-1 text-sky-600 fill-current' href={`https://www.linkedin.com/in/chethana-gopinath/`}>
             <FaLinkedin />
           </a>
-          <a className='px-1 text-black-600 fill-current' href={`https://github.com/chethanagopinath`}>
+          <a className='px-1 text-zinc-950 fill-current' href={`https://github.com/chethanagopinath`}>
             <FaGithub />
           </a>
         </div>
