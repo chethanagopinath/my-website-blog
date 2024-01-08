@@ -1,7 +1,9 @@
 ---
-title: 'Fixing markdown files styles in my blog'
-date: '2023-12-09'
+title: 'Fixing UI in my website'
+date: '2023-12-11'
 ---
+
+### In progress 🚧
 
 Tried NextUI after chakra - the UI still continued to look buggy and then went to the thought process of why I need to use a fancy UI framework when all I have is a button + 4 connect buttons with icons
 
@@ -23,4 +25,25 @@ Starting this generic class to apply to all buttons:
 .btn {
   @apply rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider;
 }
+```
+
+This is the layout and color scheme in mind
+<br />
+
+![layout](https://drive.google.com/uc?id=1YVy5yTlf6mh9XsNwDxOjvv2buJsZsVko)
+
+Applying individual classes to the respective buttons
+
+I want to get a rounded purple bg button with hover color + click color 
+
+Resume looking good now.
+
+Looking at the other icons: Email, LinkedIn and GitHub
+
+Added this for spacing and color with tailwindcss:
+Example: 
+```js
+<a className='px-1 text-teal-600 fill-current' href={`mailto:${email}`}>
+  <MdEmail />
+</a>
 ```

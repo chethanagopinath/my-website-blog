@@ -4,11 +4,8 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
-import { Divider, Icon } from '@chakra-ui/react'
 import { MdEmail } from 'react-icons/md';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { Button, ButtonGroup } from '@chakra-ui/react'
-import { Stack, HStack } from '@chakra-ui/react'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -30,17 +27,17 @@ export default function Home({allPostsData}) {
       <section className={utilStyles.headingMd}>
         <p>Hello, I'm Chethana 👋🏼 </p>
         <p>I'm a software engineer residing in sunny California. I enjoy learning, solving problems, and spending my free time experimenting with new cuisines and flavors in the kitchen and exploring beautiful scenic places. </p>
-        <HStack spacing={4} pb={5} pt={5}>
-          <a href={`mailto:${email}`}>
-            <Icon as={MdEmail} color='green.500' w={8} h={8} />
+        <div className='flex flex-row py-5'>
+          <a className='px-1 text-teal-600 fill-current' href={`mailto:${email}`}>
+            <MdEmail />
           </a>
-          <a href={`https://www.linkedin.com/in/chethana-gopinath/`}>
-            <Icon as={FaLinkedin} color='blue.500' w={8} h={8} />
+          <a className='px-1 text-sky-600 fill-current' href={`https://www.linkedin.com/in/chethana-gopinath/`}>
+            <FaLinkedin />
           </a>
-          <a href={`https://github.com/chethanagopinath`}>
-            <Icon as={FaGithub} color='black.500' w={8} h={8} />
+          <a className='px-1 text-black-600 fill-current' href={`https://github.com/chethanagopinath`}>
+            <FaGithub />
           </a>
-        </HStack>
+        </div>
         <a href="https://drive.google.com/file/d/18dGMncVIzm-BGyM9PZ2TJtlrkQHejnVX/view?usp=sharing"
           className="btn text-white bg-violet-600 hover:bg-violet-700 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"
         >
