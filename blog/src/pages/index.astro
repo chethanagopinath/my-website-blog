@@ -1,0 +1,32 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+import Social from '../components/Social.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Layout from '../layouts/BlogPost.astro';
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<Layout
+			title="About Me"
+			description="About me page"
+			pubDate={new Date('March 17 2024')}
+			heroImage="/chethana.width-400.jpg"
+		>
+			<p>Hello, I'm Chethana 👋🏼 </p>
+			<p>I'm a software engineer residing in sunny California ☀️ <br/> I enjoy learning, solving problems, and spending my free time experimenting with new cuisines and flavors in the kitchen and exploring beautiful scenic places. </p>
+			<p>You can email me at <a href="mailto:chethanagopinath@gmail.com" style="text-decoration:None">chethanagopinath@gmail.com</a> if you have an interesting opportunity or just want to connect!</p>
+			<p>You can see what I'm currently hacking on with my socials below 👇🏼 or read about them in <a href="/blog">my blog</a></p>
+			<Social platform="github" username="chethanagopinath" />
+			<Social platform="linkedin" username="chethana-gopinath" />
+		</Layout>
+	</body>
+</html>
