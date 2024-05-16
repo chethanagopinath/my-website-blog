@@ -2,6 +2,7 @@
 title: 'PyCascades 2024'
 description: 'Experience helping to organize PyCascades'
 pubDate: 'Apr 25 2024'
+heroImage: '/pycascades-2024-badge.png'
 ---
 
 I was Diversity Chair at PyCascades 2024. 
