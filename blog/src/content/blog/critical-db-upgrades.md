@@ -5,7 +5,7 @@ pubDate: 'May 16 2024'
 heroImage: '/aurora-rds-logo.png'
 ---
 
-I accidentally discovered that we have to critical database upgrades for certain services since their RDS versions were going EOL in a few months!
+I accidentally discovered that we have to do critical database upgrades for 6 services since their RDS versions were going EOL in a few months.
 
 ### How did I get here?
 I was investigating an ops issue where the database of a service restarted at night (yikes), with VictorOps pinging the on-call person and others at 3AM their time. This was due to a minor version upgrade on the database, but we specifically disabled a minor version upgrade on the particular service. 
