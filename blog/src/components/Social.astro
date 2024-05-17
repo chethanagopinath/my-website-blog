@@ -1,13 +1,35 @@
 ---
 const { platform, username } = Astro.props;
 ---
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+
+{platform === "linkedin" ? (
+  <a href={`https://www.${platform}.com/in/${username}`} class="social-link">{platform}</a>
+) : (
+  <a href={`https://www.${platform}.com/${username}`} class="social-link">{platform}</a>
+)}
+
+<!-- <style>
+  a {
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: #4c1d95;
+    text-decoration: none;
+  }
+</style> -->
 
 <style>
-    a {
-      padding: 0.5rem 1rem;
-      color: white;
-      background-color: #4c1d95;
-      text-decoration: none;
-    }
-  </style>
+  .social-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: #4c1d95;
+    text-decoration: none;
+    border-radius: 0.5rem; /* Rounded corners */
+    font-size: 1rem; /* Adjust font size for better readability */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .social-link:hover {
+    background-color: #3c1580; /* Darker shade for hover effect */
+  }
+</style>
